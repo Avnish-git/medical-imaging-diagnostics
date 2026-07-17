@@ -6,7 +6,7 @@ from model import build_model, weighted_binary_crossentropy
 from config import LEARNING_RATE, EPOCHS
 
 
-def train(csv_path, image_dir, checkpoint_path="best_model.keras"):
+def train(csv_path, image_dir, checkpoint_path='/content/drive/MyDrive/medical_imaging_project/best_model.keras'):
     df = build_label_dataframe(csv_path, image_dir)
     train_df, val_df, _ = split_data(df)
 
