@@ -21,3 +21,6 @@ Pipeline for multi-label chest X-ray classification using TensorFlow.
 | **Hernia** | **0.9291** |
 
 **Macro Average AUC:** 0.6951
+### 🚀 Next Steps & Limitations
+* **Dataset Scale:** This pipeline was trained on a 5,606-image sample subset due to compute constraints. Training on the full NIH ChestX-ray14 dataset (112,120 images) would significantly improve per-class feature extraction.
+* **Phase 2 Fine-Tuning:** The current baseline utilizes a frozen backbone. The next engineering step is to unfreeze the top layers of the backbone (DenseNet121/MobileNetV2) and train at a reduced learning rate (`1e-5`) to learn X-ray-specific edge features.
